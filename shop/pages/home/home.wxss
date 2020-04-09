@@ -1,0 +1,78 @@
+.swiper-box {
+  /**
+  * 1rpx = 0.5px
+  **/
+  padding: 30rpx;
+}
+
+.swiper-box swiper {
+  height: 320rpx;
+}
+
+.swiper-box swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+/**元素加了浮动之后，记得给父元素清除浮动*/
+.nav-box .nav {
+  overflow: hidden;
+  width: 2000rpx;
+}
+
+.nav-box .nav .item {
+  float: left;
+  width: 100rpx;
+  height: 60rpx;
+  border: solid 2rpx #eee;
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+}
+
+.nav-box .nav .item.current {
+ color: #ff4d00;
+}
+
+.goods-list .item {
+  display: flex;
+  padding: 30rpx 20rpx;
+  border-bottom: solid 2rpx #eee;
+}
+
+.goods-list .item .pic {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.goods-list .item .pic image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.goods-list .item .content {
+  margin-left: 20px;
+}
+.goods-list .item .content .title {
+  font-size: 32rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.goods-list .item .content .desc {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+.goods-list .item .content .price {
+  margin-top: 10rpx;
+}
+
+.goods-list .no-more {
+  text-align: center;
+  padding: 30rpx;
+}

@@ -1,0 +1,19 @@
+<view class="page-box">
+	<!--未登录状态开始-->
+	<view class="login-info">
+		<image src="/images/default-header.png"></image>
+		<view class="login">
+			<view class="top"> 点击登录</view>
+		</view>
+	</view>
+	<!--未登录状态结束-->
+	<!--已登录状态开始-->
+	<view class="login-info">
+		<image src="/images/default-header.png"></image>
+    <view class="login">
+			<view class="top"> aracwang</view>
+      <view class="desc"> 铂金用户</view>
+		</view>
+	</view>
+	<!--已登录状态结束-->
+</view>
