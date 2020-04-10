@@ -24,3 +24,7 @@ page {
   /* 定义统一的字体大小，嘉盛设计稿大小是375px*/
   font-size: 28rpx;
 }
+
+image {
+  width: 100%;
+}

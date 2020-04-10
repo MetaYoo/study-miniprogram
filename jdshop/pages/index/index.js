@@ -1,5 +1,6 @@
 // 0 引入 用来发送请求的方法 一定要把路径不全
 import { request } from "../../request/index";
+import regeneratorRuntime from '../../lib/runtime/runtime';
 
 Page({
 
@@ -21,28 +22,28 @@ Page({
   getSwipperList: function () {
     // 1. 发送异步请求获取轮播图数据 ,优化的手段是通过es6 Promise
     request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata',
+      url: '/home/swiperdata',
       header: {
         'content-type': 'application/json'
       },
       method: 'GET'
     }).then(result => {
       this.setData({
-        swiperList: result.data.message
+        swiperList: result
       });
     })
   },
 
   getCatesList: function () {
     request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/catitems',
+      url: '/home/catitems',
       header: {
         'content-type': 'application/json'
       },
       method: 'GET'
     }).then(result => {
       this.setData({
-        catesList: result.data.message
+        catesList: result
       });
     })
   },
@@ -52,14 +53,14 @@ Page({
    */
   getFloorList: function () {
     request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/floordata',
+      url: '/home/floordata',
       header: {
         'content-type': 'application/json'
       },
       method: 'GET'
     }).then(result => {
       this.setData({
-        floorList: result.data.message
+        floorList: result
       });
     })
   },
