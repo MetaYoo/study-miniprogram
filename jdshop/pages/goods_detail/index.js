@@ -59,6 +59,8 @@ Page({
      if (index === -1) {
         // 3. 不存在则第一次添加
         this.GoodsInfo.num = 1;
+        // 商品购物车选定状态
+        this.GoodsInfo.checked=true;
         cart.push(this.GoodsInfo);
      } else {
        // 4.已经存在购物和数据则执行 num++
