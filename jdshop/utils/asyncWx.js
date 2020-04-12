@@ -90,3 +90,41 @@ export const showTotast = ({title}) => {
   });
 }
 
+/**
+ * Promise 形式的微信登录
+ */
+export const login=() => {
+  return new Promise((resolve, reject) => {
+    wx.login({
+      timeout: 10000,
+      success: (res) => {
+        resolve(res);
+      },
+      fail: (err) => {
+        reject(err);
+      }
+    })
+  });
+}
+
+/**
+ *  Promise形式 微信支付 
+ * @param {*} pay 支付所必要的参数
+ */
+export const requestPayment=(pay) => {
+  return new Promise((resolve, reject) => {
+    wx.requestPayment({
+      // nonceStr: 'nonceStr',
+      // package: 'package',
+      // paySign: 'paySign',
+      // timeStamp: 'timeStamp',
+      ...pay,
+      success: (res) => {
+        resolve(res);
+      },
+      fail: (err) => {
+         reject(err);
+      }
+    })
+  });
+}

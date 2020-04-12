@@ -8,6 +8,11 @@ let ajaxTimes = 0;
  * @param {*} parms 
  */
 export const request = (params) => {
+  // 判断 url中是否带有 /my/ 请求的是私有的路径， 带上 header token
+  let header = {...params.header};
+  if (params.url.includes("/my/")) {
+     header["Authorization"] = wx.getStorageSync('token');
+  }
   ajaxTimes++;
   // 显示加载中效果
   wx.showLoading({
