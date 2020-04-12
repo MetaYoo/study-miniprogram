@@ -6,7 +6,6 @@
 			<view class="user_name">{{userinfo.nickName}}</view>
 		</view>
 	</view>
-
 	<view class="user_btn" wx:else>
 		<navigator url="/pages/login/index">登录</navigator>
 	</view>
@@ -30,7 +29,7 @@
 			</navigator>
 			<navigator>
 				<view class="his_num">0</view>
-				<view class="his_name">我饿足迹</view>
+				<view class="his_name">我的足迹</view>
 			</navigator>
 		</view>
 
@@ -38,15 +37,15 @@
 		<view class="orders_wrap">
 			<view class="orders_title">我的订单</view>
 			<view class="orders_content">
-				<navigator>
+				<navigator url="/pages/order/index?type=1">
 					<view class="iconfont icon-dingdan"></view>
 					<view class="order_name">全部订单</view>
 				</navigator>
-				<navigator>
+				<navigator url="/pages/order/index?type=2">
 					<view class="iconfont icon-daifukuan"></view>
 					<view class="order_name">待付款</view>
 				</navigator>
-				<navigator>
+				<navigator url="/pages/order/index?type=3">
 					<view class="iconfont icon-daishouhuo"></view>
 					<view class="order_name">待收货</view>
 				</navigator>
